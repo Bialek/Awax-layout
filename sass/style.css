@@ -129,8 +129,9 @@ h4 {
 }
 
 .navbar {
+  height: 100px;
   margin-bottom: 0;
-  background-color: #f4511e;
+  background-color: #000;
   z-index: 9999;
   border: 0;
   font-size: 12px !important;
@@ -140,18 +141,14 @@ h4 {
   font-family: Montserrat, sans-serif;
 }
 
-.navbar li a, .navbar .navbar-brand {
-  color: #fff !important;
-}
-
-.navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #f4511e !important;
-  background-color: #fff !important;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  color: #fff !important;
+.navbar li a {
+  font-size: 14px;
+  font-family: "Montserrat";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.286;
+  text-align: left;
 }
 
 footer .glyphicon {
@@ -202,12 +199,6 @@ footer .glyphicon {
   .btn-lg {
     width: 100%;
     margin-bottom: 35px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .logo {
-    font-size: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */
