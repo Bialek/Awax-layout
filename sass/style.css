@@ -3,8 +3,8 @@
 }
 
 body {
-  line-height: 1.8;
-  color: #818181;
+  padding: 0;
+  margin: 0;
 }
 
 h2 {
@@ -121,6 +121,18 @@ h4 {
   font-family: Montserrat, sans-serif;
 }
 
+.navbar .navbar-header {
+  height: 99px;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-collapse {
+    max-height: calc(100vh - 100px);
+    max-width: 50%;
+    padding: 0;
+  }
+}
+
 .navbar li a {
   height: 100px;
   line-height: 100px;
@@ -131,6 +143,16 @@ h4 {
   text-transform: uppercase;
   text-align: left;
   letter-spacing: 0.3px;
+  background-color: #000;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar li a {
+    height: 75px;
+    line-height: 75px;
+    padding: 0;
+  }
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
@@ -260,6 +282,9 @@ footer .glyphicon {
   .btn-lg {
     width: 100%;
     margin-bottom: 35px;
+  }
+  .navbar-nav {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
