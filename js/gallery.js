@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
     $(".filter-button").click(function() {
+        if ($(".filter-button").removeClass("active")) {
+            $(this).removeClass("active");
+        }
         var value = $(this).attr('data-filter');
         $(this).siblings().removeClass('active');
         $(this).toggleClass('active');
@@ -13,10 +16,6 @@ $(document).ready(function() {
             $('.filter').filter('.'+value).show('3000');    
         }
     });
-    
-    if ($(".filter-button").removeClass("active")) {
-        $(this).removeClass("active");
-    }
 
-    $(this).addClass("active");
+    $('.all').addClass("active");
 });

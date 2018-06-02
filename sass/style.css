@@ -16,6 +16,10 @@ section:nth-child(n+3) {
   padding: 80px 0;
 }
 
+button {
+  outline: 0;
+}
+
 .bg-grey {
   background-color: #f6f6f6;
 }
@@ -298,48 +302,63 @@ section:nth-child(n+3) {
   font-size: 59px;
 }
 
-.gallery-title {
-  font-size: 36px;
-  color: #42B32F;
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 70px;
+#projects h1 {
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
-.gallery-title:after {
-  content: "";
+#projects h2 {
+  color: #aeaeae;
+  font-size: 16px;
+}
+
+#projects ul {
+  list-style-type: none;
+  height: 60px;
+  margin-bottom: 60px;
+}
+
+#projects ul li {
+  display: inline-block;
+  margin-right: -4px;
+  height: 100%;
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  background-color: #ededed;
+}
+
+#projects ul li:first-child {
+  padding-left: 45px;
+  border-radius: 25px 0px 0px 25px;
+}
+
+#projects ul li:last-child {
+  padding-right: 45px;
+  border-radius: 0px 25px 25px 0px;
+}
+
+#projects ul li button {
+  height: 100%;
+  border: none;
+  background-color: inherit;
+}
+
+.Slider_bg {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cfcfcf;
+  border-radius: 25px;
+  background-color: #aeaeae;
   position: absolute;
-  width: 7.5%;
-  left: 46.5%;
-  height: 45px;
-  border-bottom: 1px solid #5e5e5e;
-}
-
-.filter-button {
-  font-size: 18px;
-  border: 1px solid #42B32F;
-  border-radius: 5px;
-  text-align: center;
-  color: #42B32F;
-  margin-bottom: 30px;
-}
-
-.filter-button:hover {
-  font-size: 18px;
-  border: 1px solid #42B32F;
-  border-radius: 5px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #42B32F;
-}
-
-.btn-default:active .filter-button:active {
-  background-color: #42B32F;
-  color: white;
-}
-
-.gallery_product {
-  margin-bottom: 30px;
+  left: 444px;
+  top: 1965px;
+  width: 712px;
+  height: 60px;
+  z-index: 473;
 }
 
 footer .glyphicon {
