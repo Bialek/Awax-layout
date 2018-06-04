@@ -13,7 +13,7 @@ body {
 }
 
 section:nth-child(n+3) {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 button {
@@ -404,6 +404,10 @@ button {
 }
 
 #projects a:hover {
+  background-color: #000;
+}
+
+#team li {
   background-color: #000;
 }
 
