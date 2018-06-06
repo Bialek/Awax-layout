@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?bvd5r3');
+  src:  url('../fonts/icomoon.eot?bvd5r3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?bvd5r3') format('truetype'),
+    url('../fonts/icomoon.woff?bvd5r3') format('woff'),
+    url('../fonts/icomoon.svg?bvd5r3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Clock:before {
+  content: "\e902";
+  color: #b88b58;
+}
+.icon-Quality:before {
+  content: "\e90c";
+  color: #b88b58;
+}
+.icon-Share:before {
+  content: "\e90f";
+  color: #c99065;
+}
+.icon-Star:before {
+  content: "\e910";
+  color: #b88b58;
+}
+.icon-Support:before {
+  content: "\e911";
+  color: #b88b58;
+}
+.icon-Telephone:before {
+  content: "\e916";
+  color: #fff;
+}
