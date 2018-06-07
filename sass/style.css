@@ -271,11 +271,11 @@ button {
   background-color: #000;
 }
 
-#services {
+#services, #facts {
   background-color: #000;
 }
 
-#services h1 {
+#services h1, #facts h1 {
   font-size: 30px;
   color: #fff;
   font-weight: bold;
@@ -283,12 +283,12 @@ button {
   text-align: center;
 }
 
-#services h2 {
+#services h2, #facts h2 {
   color: #aeaeae;
   font-size: 16px;
 }
 
-#services h3 {
+#services h3, #facts h3 {
   font-size: 18px;
   font-family: "Myriad Pro";
   color: white;
@@ -296,12 +296,32 @@ button {
   text-align: center;
 }
 
-#services p {
+#services h4, #facts h4 {
+  color: #b88b58;
+  font-size: 48px;
+  font-size: 900;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#services h4:after, #facts h4:after {
+  content: "";
+  width: 19px;
+  height: 2px;
+  background-color: #7e7e7e;
+  position: absolute;
+  bottom: -14px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+#services p, #facts p {
   font-family: "Myriad Pro";
   color: #7e7e7e;
 }
 
-#services span {
+#services span, #facts span {
   color: #b88b58;
   font-size: 59px;
 }
@@ -656,6 +676,63 @@ button {
 
 #price a:hover {
   background-color: #b88b58;
+}
+
+#price .premium {
+  margin-top: 60px;
+  padding-top: 60px;
+  background-color: #fff;
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: -100px;
+}
+
+#price .premium div[class*="col-sm-5"] img {
+  width: 100%;
+}
+
+#price .premium .item {
+  text-align: left;
+}
+
+#price .premium .item h1 {
+  font-size: 21px;
+}
+
+#price .premium .item h2 {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+#price .premium .carousel-indicators {
+  bottom: -70px;
+}
+
+#price .premium .carousel-indicators li {
+  border: 1px solid #b88b58;
+}
+
+#price .premium .carousel-indicators .active {
+  background-color: #b88b58;
+}
+
+#price .premium #myCarousel3 {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+#price .premium a {
+  display: block;
+  margin-top: 90px;
+  border-radius: 20px;
+  background-color: #b88b58;
+  width: 194px;
+  height: 45px;
+  margin-bottom: 60px;
+  transition: 0.6s;
+}
+
+#price .premium a:hover {
+  background-color: #000;
 }
 
 .slideanim {
