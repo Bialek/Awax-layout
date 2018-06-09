@@ -5,6 +5,10 @@
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat";
 }
+*, *:before, *:after {
+    box-sizing: border-box;
+    outline: none;
+}
 body {    
     padding: 0;
     margin: 0;
@@ -18,10 +22,6 @@ button {
 } 
 .container {
     padding: 0;
-}
-#map {
-    height:400px;
-    width:100%;
 }
 $color1: #b88b58;
 .navbar {
@@ -611,7 +611,7 @@ $color1: #b88b58;
             margin-bottom: 5px;
         }
         button {
-            background-color: #fff;
+            background-color: transparent;
             border: none;
             i {
                 border-radius: 50%;
@@ -643,8 +643,68 @@ $color1: #b88b58;
         }
     }
 }
-
-
+#contact {
+    h1 {
+        font-size: 30px;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h2 {
+        color: #aeaeae;
+        font-size: 16px;
+        margin-bottom: 80px;
+    }
+    form {
+        input, textarea {
+            border:none;
+            background-color: inherit;
+            border-bottom: 2px solid #aeaeae;
+            font-size: 13px;
+            color: rgb(158, 158, 158);
+            text-transform: uppercase;
+            padding: 15px;
+            resize: none;
+            transition: 0.6s; 
+            &:active, &:target, &:hover {
+                border-bottom: 2px solid #000;
+                outline: #000;
+            }
+        }
+        input[type*="submit"] {
+            border: none;
+            margin-top: 50px;
+            border-radius: 20px;
+            background-color: $color1;
+            color: #fff;
+            width: 194px;
+            height: 45px; 
+            margin-bottom: 75px;  
+            &:hover {   
+                background-color: #000
+            }
+        } 
+    }
+    .map {
+        padding: 0;
+        position: relative;
+        div[class*="col-sm-6"] {
+            position: absolute;
+            background-color: #fff;
+            z-index: 111;
+            max-width: 540px;
+            margin-top: 40px;
+            height: 340px;
+        }
+        #googleMap {
+            height:420px;
+            width:100%;
+            position: relative;
+            
+        }
+    }
+    
+}
 .slideanim {visibility:hidden;}
 .slide {
     animation-name: slide;
