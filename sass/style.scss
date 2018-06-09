@@ -10,7 +10,7 @@ body {
     margin: 0;
     background-color: #f7f7f7;
 }
-section:nth-child(n+3) {
+section:nth-child(n+2) {
     padding: 100px 0;
 }
 button {
@@ -19,70 +19,9 @@ button {
 .container {
     padding: 0;
 }
-.bg-grey {
-    background-color: #f6f6f6;
-}
-
-.thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-}
-.thumbnail img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
-}
-
-
-.item h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-}
-.item span {
-    font-style: normal;
-}
-.panel {
-    border: 1px solid #f4511e; 
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-    &:hover {
-        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-    }
-}
-
-.panel-footer .btn:hover {
-    border: 1px solid #f4511e;
-    background-color: #fff !important;
-    color: #f4511e;
-}
-.panel-heading {
-    color: #fff !important;
-    background-color: #f4511e !important;
-    padding: 25px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-.panel-footer {
-    background-color: white !important;
-    h3 {
-        font-size: 32px;
-    }
-    h4 {
-        color: #aaa;
-        font-size: 14px;
-    }
-    .btn {
-        margin: 15px 0;
-        background-color: #f4511e;
-        color: #fff;
-    }
+#map {
+    height:400px;
+    width:100%;
 }
 $color1: #b88b58;
 .navbar {
@@ -645,6 +584,64 @@ $color1: #b88b58;
             }
         }
     }   
+}
+#facts {
+    padding-bottom: 0;
+    .share {
+        height: 75px;
+        border-top: 1px solid #cfcfcf;
+        border-bottom: 1px solid #cfcfcf;
+        background-color: #fff;
+        line-height: 75px;
+        h2 {
+            display: inline-block;
+            font-size: 14px;
+            color: rgb(174, 174, 174);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-right: 60px;             
+        }
+        i {
+            margin-right: 5px;
+        }
+        i[class*="fas fa-share-alt"] {
+            color: #bebebe;
+            font-size: 25px;
+            vertical-align: middle;
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: #fff;
+            border: none;
+            i {
+                border-radius: 50%;
+                color: #fff;
+                width: 33px;
+                height: 33px;
+                font-size: 14px;
+                line-height: 33px;
+            }
+            &:nth-of-type(1) i {
+                background-color: #34c5f0;
+            }
+            &:nth-of-type(2) i {
+                background-color: #127cb4;
+            }
+            &:nth-of-type(3) i {
+                background-color: #326297;
+            }
+            &:nth-of-type(4) i {
+                background-color: #e74237;
+            }
+            &:nth-of-type(5) i {
+                background-color: #b71c29;
+            }
+            &:hover i {
+                background-color: #000;
+            }
+           
+        }
+    }
 }
 
 
