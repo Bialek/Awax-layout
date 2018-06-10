@@ -20,9 +20,6 @@ section:nth-child(n+2) {
 button {
     outline: 0;
 } 
-.container {
-    padding: 0;
-}
 $color1: #b88b58;
 .navbar {
     height: 100px;
@@ -373,16 +370,26 @@ $color1: #b88b58;
             a {
                 border-radius: 50%;
                 background-color: rgb(190, 190, 190);
-                width: 33px;
-                height: 33px;
+                width: 2.9vw;
+                height: 2.9vw;
                 display: block;
                 color: #fff;
-                line-height: 33px;
+                line-height: 2.9vw;
                 margin-right: 7px;
                 transition: 0.6s;
                 border: none;
                 &:hover {
                     background-color: $color1;
+                }
+                @media screen and (min-width: 1400px) {
+                    width: 33px;
+                    height: 33px;
+                    line-height: 33px;
+                }
+                @media screen and (max-width: 768px) {
+                    width: 33px;
+                    height: 33px;
+                    line-height: 33px;
                 }
             }  
         }
@@ -437,9 +444,9 @@ $color1: #b88b58;
         margin-right: 20%;
     }
     img {
-        margin-top: 55px;
+        margin: 40px 0;
         height: 50px;
-        width: 100px;
+        width: 100%;
     }
     .item img {
         margin-top: 0;
@@ -452,8 +459,7 @@ $color1: #b88b58;
         margin-top: 100px;
         border-top: 1px solid rgb(207, 207, 207);
         border-bottom: 1px solid rgb(207, 207, 207);
-        background-color: rgb(255, 255, 255);
-        height: 160px; 
+        background-color: rgb(255, 255, 255); 
     }
     .carousel-indicators {
         bottom: -70px;
@@ -588,6 +594,7 @@ $color1: #b88b58;
 #facts {
     padding-bottom: 0;
     .share {
+        width: 100%;
         height: 75px;
         border-top: 1px solid #cfcfcf;
         border-bottom: 1px solid #cfcfcf;
@@ -843,4 +850,13 @@ footer {
   .navbar-nav {
       margin: 0;
   }
+  video {
+      margin-top: 50px;
+  }
 }
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
