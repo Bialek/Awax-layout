@@ -3,19 +3,45 @@
   src: url("../fonts/MyriadPro-Regular.otf") format("opentype");
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1, #home #myCarousel .carousel-inner h1, #home #myCarousel .carousel-inner h2, #about h1, #about h2, #services h1, #facts h1, #projects h1, #team h1, #clients h1, #price h1, #contact h1, .h2, #about h2, #services h2, #facts h2, #projects h2, #team h2, #clients h2, #price h2, #contact h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, li, a {
   font-family: "Montserrat";
 }
 
+.h1, #home #myCarousel .carousel-inner h1, #home #myCarousel .carousel-inner h2, #about h1, #about h2, #services h1, #facts h1, #projects h1, #team h1, #clients h1, #price h1, #contact h1, .h2, #about h2, #services h2, #facts h2, #projects h2, #team h2, #clients h2, #price h2, #contact h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.h1, #home #myCarousel .carousel-inner h1, #home #myCarousel .carousel-inner h2, #about h1, #about h2, #services h1, #facts h1, #projects h1, #team h1, #clients h1, #price h1, #contact h1 {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.h2, #about h2, #services h2, #facts h2, #projects h2, #team h2, #clients h2, #price h2, #contact h2 {
+  font-size: 16px;
+  color: #aeaeae;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }
 
 body {
   padding: 0;
   margin: 0;
   background-color: #f7f7f7;
+  font-family: "Montserrat";
 }
 
 section:nth-child(n+2) {
@@ -26,6 +52,53 @@ button {
   outline: 0;
 }
 
+.button, #home #myCarousel .carousel-inner a, #about a, #projects a, #price a, #price .premium a, #contact form button[type*="submit"], footer div[class*="col-sm-4"]:nth-last-of-type(2) button[type*="submit"], .button-round {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+}
+
+.button:hover, #home #myCarousel .carousel-inner a:hover, #about a:hover, #projects a:hover, #price a:hover, #contact form button[type*="submit"]:hover, footer div[class*="col-sm-4"]:nth-last-of-type(2) button[type*="submit"]:hover, .button-round:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.button, #home #myCarousel .carousel-inner a, #about a, #projects a, #price a, #price .premium a, #contact form button[type*="submit"], footer div[class*="col-sm-4"]:nth-last-of-type(2) button[type*="submit"] {
+  border-radius: 20px;
+  background-color: #b88b58;
+  width: 194px;
+  height: 45px;
+  display: block;
+  line-height: 45px;
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+.button-round {
+  border-radius: 50%;
+  background-color: #b88b58;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 1, 0.24);
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  font-size: 45px;
+  line-height: 65px;
+}
+
+.carousel-indicators li {
+  border: 1px solid #b88b58;
+}
+
+.carousel-indicators .active, .carousel-indicators li:hover {
+  background-color: #b88b58;
+}
+
 .navbar {
   height: 100px;
   margin-bottom: 0;
@@ -33,7 +106,7 @@ button {
   z-index: 9999;
   border: 0;
   border-radius: 0;
-  font-family: Montserrat, sans-serif;
+  margin: 0;
 }
 
 .navbar .navbar-header {
@@ -48,7 +121,11 @@ button {
   }
 }
 
-.navbar li a {
+.navbar ul {
+  margin: 0;
+}
+
+.navbar ul li a {
   height: 100px;
   line-height: 100px;
   padding: 5px;
@@ -57,17 +134,21 @@ button {
   font-weight: 900;
   text-transform: uppercase;
   text-align: left;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.5px;
   background-color: #000;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .navbar li a {
-    height: 75px;
-    line-height: 75px;
+  .navbar ul li a {
+    height: 50px;
+    line-height: 50px;
     padding: 0;
   }
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  background-color: #000;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
@@ -84,7 +165,12 @@ button {
   left: 0;
 }
 
+#home {
+  position: relative;
+}
+
 #home #myCarousel img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: calc(100vh - 100px);
@@ -98,10 +184,6 @@ button {
 #home #myCarousel .carousel-inner h1, #home #myCarousel .carousel-inner h2 {
   font-size: 72px;
   color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 0.958;
-  text-align: center;
 }
 
 #home #myCarousel .carousel-inner h2 {
@@ -118,84 +200,39 @@ button {
   margin-bottom: 45px;
 }
 
-#home #myCarousel .carousel-inner a {
-  border-radius: 20px;
-  background-color: #b88b58;
-  width: 194px;
-  height: 45px;
-  color: #fff;
-  display: block;
-  margin: 0 auto;
-  line-height: 45px;
-  transition: 0.6s;
-  cursor: pointer;
-}
-
-#home #myCarousel .carousel-inner a:hover {
-  text-decoration: none;
-  background-color: #000;
-}
-
-#home #myCarousel .carousel-indicators li {
-  border-color: #b88b58;
-}
-
-#home #myCarousel .carousel-indicators li.active {
-  background-color: #b88b58;
-}
-
 #home #myCarousel .carousel-caption {
   top: 5%;
   left: 0;
   right: 0;
 }
 
-#about h1, #about h2 {
-  font-size: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-#about h2 {
-  font-size: 16px;
-  color: #aeaeae;
+#home a {
+  bottom: -30px;
+  right: 50px;
+  font-size: 45px;
 }
 
 #about p {
   font-size: 14px;
   font-family: "Myriad Pro";
-  line-height: 1.786;
   text-align: left;
   margin-bottom: 60px;
 }
 
 #about video {
-  width: 100%;
+  width: 90%;
   -webkit-box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.5);
 }
 
-#about a {
-  border-radius: 20px;
-  background-color: #b88b58;
-  width: 194px;
-  height: 45px;
-  display: block;
-  line-height: 45px;
-  font-size: 12px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.6s;
-  cursor: pointer;
+@media screen and (max-width: 768px) {
+  #about video {
+    margin-top: 50px;
+  }
 }
 
-#about a:hover {
-  background-color: #000;
+#about a {
+  margin: 0;
 }
 
 #services, #facts {
@@ -203,16 +240,7 @@ button {
 }
 
 #services h1, #facts h1 {
-  font-size: 30px;
   color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-#services h2, #facts h2 {
-  color: #aeaeae;
-  font-size: 16px;
 }
 
 #services h3, #facts h3 {
@@ -253,24 +281,17 @@ button {
   font-size: 59px;
 }
 
-#projects h1 {
-  font-size: 30px;
-  font-family: "Montserrat";
-  color: black;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1;
+#services div[class*="col-sm-3"] {
+  border-right: 1px solid #383838;
+  border-left: 1px solid #383838;
 }
 
-#projects h2 {
-  color: #aeaeae;
-  font-size: 16px;
-  margin-bottom: 50px;
+#projects h1 {
+  color: black;
 }
 
 #projects ul {
   list-style-type: none;
-  height: 60px;
   margin-bottom: 60px;
 }
 
@@ -279,10 +300,11 @@ button {
   position: relative;
   display: inline-block;
   margin-right: -4px;
-  height: 100%;
+  height: 60px;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
   background-color: #ededed;
+  margin-bottom: 5px;
 }
 
 #projects ul li::before {
@@ -302,6 +324,13 @@ button {
   border-left: 1px solid #cfcfcf;
 }
 
+@media screen and (max-width: 600px) {
+  #projects ul li:first-child {
+    padding-left: 15px;
+    border-radius: 0;
+  }
+}
+
 #projects ul li:last-child {
   padding-right: 45px;
   border-radius: 0px 25px 25px 0px;
@@ -310,6 +339,13 @@ button {
 
 #projects ul li:last-child:before {
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  #projects ul li:last-child {
+    padding-right: 15px;
+    border-radius: 0;
+  }
 }
 
 #projects ul li button {
@@ -336,28 +372,6 @@ button {
   display: inline-block;
 }
 
-#projects a {
-  border-radius: 20px;
-  background-color: #b88b58;
-  width: 194px;
-  height: 45px;
-  display: block;
-  line-height: 45px;
-  font-size: 12px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.6s;
-  cursor: pointer;
-  margin: 0 auto;
-}
-
-#projects a:hover {
-  background-color: #000;
-}
-
 #team {
   position: relative;
 }
@@ -376,18 +390,7 @@ button {
 }
 
 #team h1 {
-  font-size: 30px;
-  font-family: "Montserrat";
   color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-#team h2 {
-  color: #aeaeae;
-  font-size: 16px;
-  margin-bottom: 50px;
 }
 
 #team div[class*="col-sm-4"] {
@@ -408,6 +411,8 @@ button {
 }
 
 #team div[class*="col-sm-4"] div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 20px;
 }
@@ -421,6 +426,7 @@ button {
   color: #fff;
   line-height: 2.9vw;
   margin-right: 7px;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   border: none;
 }
@@ -449,46 +455,23 @@ button {
   bottom: -70px;
 }
 
-#team .carousel-indicators li {
-  border: 1px solid #b88b58;
-}
-
-#team .carousel-indicators .active {
-  background-color: #b88b58;
-}
-
 #clients {
   padding-bottom: 0;
 }
 
 #clients h1 {
-  font-size: 30px;
-  font-family: "Montserrat";
   color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-#clients h2 {
-  color: #aeaeae;
-  font-size: 16px;
-  margin-bottom: 50px;
 }
 
 #clients h3 {
   font-size: 24px;
-  font-family: "Montserrat";
   color: black;
   font-weight: bold;
-  line-height: 0.75;
 }
 
 #clients h4 {
   font-size: 18px;
-  font-family: "Montserrat";
   color: black;
-  line-height: 1;
   margin: 0;
   margin-bottom: 50px;
 }
@@ -528,23 +511,12 @@ button {
   bottom: -70px;
 }
 
-#clients .carousel-indicators li {
-  border: 1px solid #b88b58;
-}
-
-#clients .carousel-indicators .active {
-  background-color: #b88b58;
-}
-
 #price {
   background-color: #ededed;
 }
 
 #price h1 {
-  font-size: 30px;
   color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -561,13 +533,6 @@ button {
   color: #aeaeae;
   font-size: 10px;
   margin-bottom: 25px;
-}
-
-#price h2 {
-  color: #aeaeae;
-  font-size: 16px;
-  margin-bottom: 45px;
-  margin-top: 15px;
 }
 
 #price h3 {
@@ -601,19 +566,7 @@ button {
 }
 
 #price a {
-  border-radius: 20px;
   background-color: #363636;
-  width: 129px;
-  height: 45px;
-  display: block;
-  margin: 0 auto;
-  line-height: 45px;
-  font-size: 12px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.6s;
 }
 
 #price a:hover {
@@ -650,31 +603,13 @@ button {
   bottom: -70px;
 }
 
-#price .premium .carousel-indicators li {
-  border: 1px solid #b88b58;
-}
-
-#price .premium .carousel-indicators .active {
-  background-color: #b88b58;
-}
-
 #price .premium #myCarousel3 {
   border-bottom: 1px solid #d8d8d8;
 }
 
 #price .premium a {
-  display: block;
-  margin-top: 90px;
-  border-radius: 20px;
-  background-color: #b88b58;
-  width: 194px;
-  height: 45px;
   margin-bottom: 60px;
-  transition: 0.6s;
-}
-
-#price .premium a:hover {
-  background-color: #000;
+  margin-top: 90px;
 }
 
 #facts {
@@ -683,7 +618,6 @@ button {
 
 #facts .share {
   width: 100%;
-  height: 75px;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
   background-color: #fff;
@@ -713,6 +647,12 @@ button {
 #facts .share button {
   background-color: transparent;
   border: none;
+  display: inline-block;
+  font-size: 14px;
+  color: #aeaeae;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 60px;
 }
 
 #facts .share button i {
@@ -749,15 +689,10 @@ button {
 }
 
 #contact h1 {
-  font-size: 30px;
   color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 #contact h2 {
-  color: #aeaeae;
-  font-size: 16px;
   margin-bottom: 80px;
 }
 
@@ -770,6 +705,7 @@ button {
   text-transform: uppercase;
   padding: 15px;
   resize: none;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -778,19 +714,12 @@ button {
   outline: #000;
 }
 
-#contact form input[type*="submit"] {
-  border: none;
-  margin-top: 50px;
-  border-radius: 20px;
-  background-color: #b88b58;
-  color: #fff;
-  width: 194px;
-  height: 45px;
-  margin-bottom: 75px;
+#contact form textarea {
+  margin-bottom: 50px;
 }
 
-#contact form input[type*="submit"]:hover {
-  background-color: #000;
+#contact form button[type*="submit"] {
+  margin-bottom: 75px;
 }
 
 #contact .map {
@@ -804,8 +733,8 @@ button {
   z-index: 111;
   max-width: 540px;
   margin-top: 40px;
-  height: 310px;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #contact .map div[class*="col-sm-6"] i {
@@ -841,6 +770,11 @@ footer {
   position: relative;
 }
 
+footer .button-round {
+  top: -30px;
+  left: 30px;
+}
+
 footer a {
   display: inline-block;
   border-radius: 50%;
@@ -850,7 +784,9 @@ footer a {
   line-height: 33px;
   color: #fff;
   text-decoration: none;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
@@ -865,14 +801,14 @@ footer p {
   text-align: left;
 }
 
-footer div[class*="col-sm-4"]:last-child {
+footer div[class*="col-sm-4"]:nth-last-of-type(2) {
   border-radius: 3px;
   background-color: #373737;
   height: 198px;
   padding: 45px 65px;
 }
 
-footer div[class*="col-sm-4"]:last-child input {
+footer div[class*="col-sm-4"]:nth-last-of-type(2) input {
   margin: 0 auto;
   border: none;
   display: block;
@@ -883,25 +819,13 @@ footer div[class*="col-sm-4"]:last-child input {
   text-align: center;
   border-bottom: 2px solid #aeaeae;
   margin-bottom: 30px;
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   padding: 15px;
 }
 
-footer div[class*="col-sm-4"]:last-child input:active, footer div[class*="col-sm-4"]:last-child input:hover {
+footer div[class*="col-sm-4"]:nth-last-of-type(2) input:active, footer div[class*="col-sm-4"]:nth-last-of-type(2) input:hover {
   border-color: #fff;
-}
-
-footer div[class*="col-sm-4"]:last-child input[type*="submit"] {
-  border: none;
-  border-radius: 20px;
-  background-color: #b88b58;
-  color: #fff;
-  width: 194px;
-  height: 45px;
-}
-
-footer div[class*="col-sm-4"]:last-child input[type*="submit"]:hover {
-  background-color: #000;
 }
 
 footer .owner {
@@ -940,10 +864,12 @@ footer .owner h1 {
 @keyframes slide {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(70%);
     transform: translateY(70%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0%);
     transform: translateY(0%);
   }
 }
@@ -956,29 +882,6 @@ footer .owner h1 {
   100% {
     opacity: 1;
     -webkit-transform: translateY(0%);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0;
-  }
-  .btn-lg {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-  .navbar-nav {
-    margin: 0;
-  }
-  video {
-    margin-top: 50px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
